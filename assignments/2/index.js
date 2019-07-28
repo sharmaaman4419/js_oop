@@ -85,41 +85,51 @@ sandra.introduce(); // -> Logs 'Hi, my name is Sandra'
 /*** CHALLENGE 1 of 3 ***/
 
 function PersonConstructor() {
-	// add code here
-
-
+	this.greet = function greet() {
+    alert("hello")
+  }
 }
-
 
 // /********* Uncomment this line to test your work! *********/
 var simon = new PersonConstructor;
-// simon.greet(); // -> Logs 'hello'
+simon.greet(); // -> Logs 'hello'
 
 
 
 /*** CHALLENGE 2 of 3 ***/
 
-function personFromConstructor(name, age) {
-	// add code here
-
-
+function PersonFromConstructor(name, age) {
+  this.name = name;
+  this.age = age;
+  this.greet = function greet() {
+    alert("hello")
+  }
 }
 
-var mike = personFromConstructor('Mike', 30);
+var mike =  new PersonFromConstructor('Mike', 30);
 
 
 // /********* Uncomment these lines to test your work! *********/
-// console.log(mike.name); // -> Logs 'Mike'
-// console.log(mike.age); //-> Logs 30
-// mike.greet(); //-> Logs 'hello'
+ console.log(mike.name); // -> Logs 'Mike'
+ console.log(mike.age); //-> Logs 30
+ mike.greet(); //-> Logs 'hello'
 
 
 
 /*** CHALLENGE 3 of 3 ***/
 // add code here
+function PersonFromConstructor(name, age) {
+  this.name = name;
+  this.age = age;
+    this.introduce = function introduce() {
+      alert("Hi,my name is mike");
+    }
+  }
+
+var mike =  new PersonFromConstructor('Mike', 30);
 
 
-// mike.introduce(); // -> Logs 'Hi, my name is Mike'
+ mike.introduce(); // -> Logs 'Hi, my name is Mike'
 
 
 /****************************************************************
