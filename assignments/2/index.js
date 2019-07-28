@@ -27,41 +27,52 @@ var vicky = makePerson('Vicky', 24);
 ****************************************************************/
 
 /*** CHALLENGE 1 of 3 ***/
+// /********* Uncomment this line to test your work! *********/
 
 var personStore = {
-	// add code here
-
-
+	greet() {alert("hello")}
 };
+ var personStore = Object.create(personStore);
 
-// /********* Uncomment this line to test your work! *********/
-// personStore.greet(); // -> Logs 'hello'
+personStore.greet(); // -> Logs 'hello'
 
 
 
 /*** CHALLENGE 2 of 3 ***/
 
 function personFromPersonStore(name, age) {
-	// add code here
-
-
+  let object = Object.create(personStore);
+  object.name = name;
+  object.age = age;
+  return object;
 }
 
 var sandra = personFromPersonStore('Sandra', 26);
 
 
 // /********* Uncomment these lines to test your work! *********/
-// console.log(sandra.name); // -> Logs 'Sandra'
-// console.log(sandra.age); //-> Logs 26
-// sandra.greet(); //-> Logs 'hello'
+ console.log(sandra.name); // -> Logs 'Sandra'
+ console.log(sandra.age); //-> Logs 26
+ sandra.greet(); //-> Logs 'hello'
 
 
 
 /*** CHALLENGE 3 of 3 ***/
 
-// add code here
+var personStore = {
+  introduce() {alert("hi,my name is sandra")}
+};
 
-// sandra.introduce(); // -> Logs 'Hi, my name is Sandra'
+function personFromPersonStore(name, age) {
+  let object = Object.create(personStore);
+  object.name = name;
+  object.age = age;
+  return object;
+}
+
+var sandra = personFromPersonStore("sandra",26);
+
+sandra.introduce(); // -> Logs 'Hi, my name is Sandra'
 
 
 
