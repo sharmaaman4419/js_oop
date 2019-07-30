@@ -140,19 +140,18 @@ var mike =  new PersonFromConstructor('Mike', 30);
 
 class PersonClass {
 	constructor() {
-    // add code here
-
 
 	}
-
-	// add code here
+greet() { 
+  alert("hello");
+}
 
 }
 
 
 // /********* Uncomment this line to test your work! *********/
 var george = new PersonClass;
-// george.greet(); // -> Logs 'hello'
+george.greet(); // -> Logs 'hello'
 
 
 
@@ -160,11 +159,20 @@ var george = new PersonClass;
 
 // add code here
 
+class DeveloperClass { 
+  constructor(name,age) { 
+    this.name = name;
+    this.age = age;
+  }
+  introduce() {
+    console.log(Hello,World,my name is thai);
+  }
+}
 
 // /********* Uncomment these lines to test your work! *********/
-// var thai = new DeveloperClass('Thai', 32);
-// console.log(thai.name); // -> Logs 'Thai'
-// thai.introduce(); //-> Logs 'Hello World, my name is Thai'
+ var thai = new DeveloperClass('Thai', 32);
+ console.log(thai.name); // -> Logs 'Thai'
+thai.introduce(); //-> Logs 'Hello World, my name is Thai'
 
 
 
