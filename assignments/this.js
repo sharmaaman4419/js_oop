@@ -1,26 +1,26 @@
-console.log(this.document === document); // Output
+console.log(this.document === document);  true
 
-console.log(this === window); //Output
+console.log(this === window); true
 
 var myFunction = function() {
   console.log(this);
 };
-myFunction(); // Output
+myFunction(); window
 
 function f1() {
   "use strict";
   return this;
 }
-console.log(f1() === window); //Output
+console.log(f1() === window); false
 
 function foo() {
   console.log("Simple function call");
   console.log(this === window);
 }
 
-foo(); //Output ??
-console.log(this === window)(
-  // Output
+foo(); Simple function call, true
+
+console.log(this === window) true
 
   // This for IIFE
   function() {
