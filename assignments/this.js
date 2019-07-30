@@ -36,13 +36,13 @@ function foo() {
   console.log(this === window);
 }
 
-foo(); // Output
+foo();  false
 
 var myObject = {};
 myObject.someMethod = function() {
   console.log(this);
 };
-myObject.someMethod(); //Value Of This
+myObject.someMethod();  object
 
 // This refers to the New Instance
 
@@ -56,9 +56,9 @@ function Person(fn, ln) {
 }
 
 let person = new Person("John", "Reed");
-person.displayName(); // Output
+person.displayName(); John Reed
 let person2 = new Person("Paul", "Adams");
-person2.displayName(); // Output
+person2.displayName();  Paul Adams
 
 //This refers to the invoker Object
 function foo() {
@@ -75,10 +75,10 @@ let user = {
   }
 };
 
-user.foo(); // Output
+user.foo();    false
 let fun1 = user.foo1;
-fun1(); // Output ??
-user.foo1(); // Output ??
+fun1();        false
+user.foo1();   false
 
 //this will call apply and bind
 
@@ -90,13 +90,13 @@ var module = {
   }
 };
 
-module.getX(); // Output ??
+module.getX(); 9
 
 var retrieveX = module.getX;
-retrieveX(); //Output ??
+retrieveX();  9
 
 var boundGetX = retrieveX.bind(module);
-boundGetX(); // Output ??
+boundGetX(); 81
 
 // Call with new constructor
 
