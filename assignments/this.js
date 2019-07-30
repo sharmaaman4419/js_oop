@@ -110,11 +110,11 @@ function Person(fn, ln) {
 }
 
 let person = new Person("John", "Reed");
-person.displayName(); // Output
+person.displayName(); John Reed
 let person2 = new Person("Paul", "Adams");
-person2.displayName(); // Output
+person2.displayName(); Paul Adams
 
-person.displayName.call(person2); // Output ??
+person.displayName.call(person2); Paul Adams
 
 // Guess the output of the following
 
@@ -131,25 +131,25 @@ obj.getThis3 = obj.getThis.bind(obj);
 obj.getThis4 = obj.getThis2.bind(obj);
 
 // Output
-obj.getThis();
+obj.getThis(); it will represents window
 
 // Output
 obj.getThis.call(a);
 
 // Output
-obj.getThis2();
+obj.getThis2(); it will represents the object
 
 // Output
 obj.getThis2.call(a);
 
 // Output
-obj.getThis3();
+obj.getThis3(); it will represents the window
 
 // Output
 obj.getThis3.call(a);
 
 // Output
-obj.getThis4();
+obj.getThis4(); it represents the object
 
 // Output
 obj.getThis4.call(a);
